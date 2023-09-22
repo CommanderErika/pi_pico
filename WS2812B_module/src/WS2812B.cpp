@@ -152,6 +152,7 @@ void WS2812B_Module::clear_all_leds(void){
     for(int i = 0; i < NUM_LEDS; i++){
 
         // Send 0x000000 or (0, 0, 0) to clear
+        set_value(i, 0, 0, 0);
         send_hexcode(0, 0, 0);
     }
 }
